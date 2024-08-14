@@ -1,0 +1,10 @@
+<h2>Create Item</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Name:</label>
+    <input type="text" name="name"><br>
+    <label>Description:</label>
+    <textarea name="description"></textarea><br>
+    <button type="submit">Create</button>
+</form>
+<a href="{% url 'item_list' %}">Back to List</a>
